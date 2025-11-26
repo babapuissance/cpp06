@@ -32,7 +32,7 @@ void ScalarConverter::convert(std::string const &s){
         c = s[0]; i = c; f = c; d = c;
     }//float
 
-    else if (s.back()=='f'){
+    else if (s[s.size() - 1] == 'f'){
         f = std::strtof(s.c_str(), NULL);
         c = static_cast<char>(f);
         i = static_cast<int>(f);
